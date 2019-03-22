@@ -8,13 +8,22 @@ import javax.persistence.Entity;
 
 @Entity
 public class Position extends ModelBase {
-    private String name;
+    private String nombreC;
+    private String descripcionC;
 
-    public String getName() {
-        return name;
+    public String getNombreC() {
+        return nombreC;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombreC(String nombreC) {
+        this.nombreC = nombreC;
+    }
+
+    public String getDescripcionC() {
+        return descripcionC;
+    }
+
+    public void setDescripcionC(String descripcionC) {
+        this.descripcionC = descripcionC;
     }
 }

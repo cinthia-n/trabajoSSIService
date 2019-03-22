@@ -14,6 +14,8 @@ public class Contract extends ModelBase {
     private Employee employee;
     @OneToOne(optional = false)
     private Position position;
+    private String nombreContrato;
+    private String descripcionContrato;
     private Date initDate;
     private Date endDate;
 
@@ -31,6 +33,22 @@ public class Contract extends ModelBase {
 
     public void setPosition(Position position) {
         this.position = position;
+    }
+
+    public String getNombreContrato() {
+        return nombreContrato;
+    }
+
+    public void setNombreContrato(String nombreContrato) {
+        this.nombreContrato = nombreContrato;
+    }
+
+    public String getDescripcionContrato() {
+        return descripcionContrato;
+    }
+
+    public void setDescripcionContrato(String descripcionContrato) {
+        this.descripcionContrato = descripcionContrato;
     }
 
     public Date getInitDate() {

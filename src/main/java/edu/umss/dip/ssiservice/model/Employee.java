@@ -15,34 +15,70 @@ import java.util.List;
 
 @Entity
 public class Employee extends ModelBase<EmployeeDto> {
-    private String firstName;
-    private String lastName;
-    private Byte[] image;
+    private String CI;
+    private String nombresE;
+    private String apellidosE;
+    private String direccion;
+    private String telefono;
+    private String correo;
+    private String gradoInstruccion;
     @OneToMany(mappedBy = "employee", fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     private List<Contract> contracts = new ArrayList<>();
 
-    public String getFirstName() {
-        return firstName;
+    public String getCI() {
+        return CI;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setCI(String CI) {
+        this.CI = CI;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getNombresE() {
+        return nombresE;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setNombresE(String nombresE) {
+        this.nombresE = nombresE;
     }
 
-    public Byte[] getImage() {
-        return image;
+    public String getApellidosE() {
+        return apellidosE;
     }
 
-    public void setImage(Byte[] image) {
-        this.image = image;
+    public void setApellidosE(String apellidosE) {
+        this.apellidosE = apellidosE;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getGradoInstruccion() {
+        return gradoInstruccion;
+    }
+
+    public void setGradoInstruccion(String gradoInstruccion) {
+        this.gradoInstruccion = gradoInstruccion;
     }
 
     public List<Contract> getContracts() {
